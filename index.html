@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <title>Iniciar seccion</title>
+</head>
+<body>
+    <main>
+        <h1 id="title">Iniciar Seccion</h1>
+        <p id="subtitle">Para acceder a la lista de contactos debe iniciar seccion</p>
+        <!-- formulario de ingresar usuario y clave -->
+        <form id="form_ingresar">
+            <label for="">USUARIO</label>
+            <input id="user-ingresar" type="text" placeholder="nombre de usuario">
+            <label for="">CLAVE</label>
+            <input id="password-ingresar" autocomplete="" type="password" placeholder="ingrese clave">
+            <button id="btn-ingresar">ingresar</button>
+        </form>
+        <!-- formulario de crear usuario y clave -->
+        <form id="form_create-user">
+
+            <label for="">CREAR USUARIO</label>
+            <input id="user-create" type="text" placeholder="registrar nombre">
+            <label for="">CREAR CLAVE</label>
+            <input id="password-create" type="password" autocomplete="" placeholder="registar clave">
+            <button id="btn-registar">registar</button>
+
+        </form>
+        <a id="create-user">CREAR CUENTA</a>
+        <a id="ingresar-cuenta">INICIAR SECCION</a>
+    </main>
+    
+    <script src="./iniciar.js"></script>
+   
+</body>
+</html>
