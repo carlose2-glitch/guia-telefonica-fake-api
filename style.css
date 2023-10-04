@@ -24,6 +24,8 @@ main{
 }
 main p{
     font-size: 1.2rem;
+    margin: 0 1rem;
+    word-break: break-word;
 }
 main form{
     gap: 0.5rem;

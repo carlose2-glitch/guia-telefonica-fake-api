@@ -1,4 +1,4 @@
-
+const btnCerrarSesion = document.getElementById('cerrar-sesion');
 const userIn = document.querySelector('.enter_name');
 const userTelf = document.querySelector('.enter_number');
 const listContactBtn = document.querySelector('.list_item');
@@ -242,6 +242,13 @@ const deleteContact = async (borrar) =>{//borrar el contacto
     {method: 'DELETE'})
     borrar.parentElement.parentElement.remove();
 }
+
+//boton de cerrar sesion
+btnCerrarSesion.addEventListener('click', e=>{
+    e.preventDefault();
+    window.location.href = '../index.html';
+})
+
 
 //imprime los contactos al iniciar la pagina
 const getcontactsdatabase = async () =>{
