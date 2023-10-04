@@ -15,7 +15,7 @@ form.addEventListener('submit', async e =>{
 
     e.preventDefault();
 
-    const response = await fetch('https://sextointento.onrender.com/users',{method: 'GET'});
+    const response = await fetch('https://septimointent.onrender.com/users',{method: 'GET'});
     const users = await response.json();
     const uservalue = e.target.children[1].value;
     const passwordValue = e.target.children[3].value;
@@ -25,6 +25,7 @@ form.addEventListener('submit', async e =>{
     
     if(userFind && passwordFind){
         
+        localStorage.setItem('user', JSON.stringify(userFind));
         window.location.href = './guia-telefonica/listcontact.html';
     }else{
         console.log('error en usuario o clave');
@@ -58,7 +59,7 @@ formCreateUser.addEventListener('submit', e =>{
 
 const addUser = async (usuario, clave) =>{//funcion de agregar usuario a la base de datos
 
-    const response = await fetch('https://sextointento.onrender.com/users', {method: "GET"});
+    const response = await fetch('https://septimointent.onrender.com/users', {method: "GET"});
     const users = await response.json();
     console.log(users)
     const userFind = users.find(user => user.username === usuario);
@@ -66,7 +67,7 @@ const addUser = async (usuario, clave) =>{//funcion de agregar usuario a la base
 
         console.log('el usuario ya existe');
     }else{
-        await fetch('https://sextointento.onrender.com/users', {method: "POST", 
+        await fetch('https://septimointent.onrender.com/users', {method: "POST", 
         headers: {
             'Content-Type': 'application/json'
         },
