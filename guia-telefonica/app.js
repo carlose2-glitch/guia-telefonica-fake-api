@@ -122,9 +122,9 @@ saveContact.addEventListener('click', async e =>{
     <input type='text' value='${data.username}' readonly class='input_edit enter_name-edit'>
     
     <button class='btn-edit'>
-        <i class='fa-solid fa-pencil' onclick='editproduct(${contador})'></i>
+        <i class='fa-solid fa-pencil'></i>
         
-        <div class="iconcheck" onclick='saveproduct(${contador})'>
+        <div class="iconcheck">
 
             <i class="fa-solid fa-check" id="${response.id}"></i>
         </div>
