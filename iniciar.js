@@ -28,11 +28,9 @@ form.addEventListener('submit', async e =>{
         localStorage.setItem('user', JSON.stringify(userFind));
         window.location.href = './guia-telefonica/listcontact.html';
     }else{
-        console.log('error en usuario o clave');
+        alert('error en usuario o clave');
     }
    
-   //console.log(e.target.children[1].value);//usuario
-    //console.log(e.target.children[3].value);//clave
 })
 
 //formulario de crear usuario
@@ -44,15 +42,12 @@ formCreateUser.addEventListener('submit', e =>{
     const evlUsuario = e.target.children[1].value;//crear usuario
     const evlClave = e.target.children[3].value;//crear clave
     
-    
-    //console.log(userFind);
-
     if(user.test(evlUsuario) && password.test(evlClave)){
 
         addUser(evlUsuario, evlClave)
 
     }else{
-        console.log('el usuario debe ser un solo nombre y la contraseña no debe tener espacios');
+        alert('el usuario debe ser un solo nombre con la primera letra mayuscula y la contraseña no debe tener espacios');
     }
 
 })
@@ -61,11 +56,10 @@ const addUser = async (usuario, clave) =>{//funcion de agregar usuario a la base
 
     const response = await fetch('https://septimointent.onrender.com/users', {method: "GET"});
     const users = await response.json();
-    console.log(users)
     const userFind = users.find(user => user.username === usuario);
     if(userFind){
 
-        console.log('el usuario ya existe');
+        alert('el usuario ya existe');
     }else{
         await fetch('https://septimointent.onrender.com/users', {method: "POST", 
         headers: {
