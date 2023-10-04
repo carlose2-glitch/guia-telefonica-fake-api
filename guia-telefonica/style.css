@@ -203,6 +203,7 @@ color: #668dd1;
     border: none;
 }
 #btn-cerrar-sesion{
+    margin-bottom: 2rem;
     margin-top: 1rem;
     width: 100%;
     display: flex;
