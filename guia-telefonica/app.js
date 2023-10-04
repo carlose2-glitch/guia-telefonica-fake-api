@@ -164,7 +164,7 @@ btnCreateReturn.addEventListener('click', e =>{
 })
 //boton para editar producto
 function editproduct(edit){
-    console.log('hola');
+
     edit.parentElement.parentElement.children[1].removeAttribute('readonly');//etiqueta del inputname
     edit.parentElement.parentElement.parentElement.children[1].children[0].removeAttribute('readonly');//etiqueta del inputnumber
     edit.parentElement.parentElement.children[1].style.background = '#4b5563';
